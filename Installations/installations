@@ -1,1 +1,15 @@
 
+Here is the text from your slide *"Linux Kernel Development Setup"*:
+
+- Install Kernel Module Tools
+ `# sudo apt-get install kmod`
+
+- Install development tools and kernel headers
+ `# sudo apt-get install build-essential`
+ `# sudo apt-get install linux-headers-$(uname -r)`
+ `# sudo apt-get install gawk wget git diffstat unzip texinfo \`
+ `gcc-multilib build-essential chrpath socat libsdl1.2-dev \`
+ `xterm ncurses-dev lzop`
+
+- Install arm cross compiled toolchain
+ `# sudo apt-get install gcc-arm-linux-gnueabihf`

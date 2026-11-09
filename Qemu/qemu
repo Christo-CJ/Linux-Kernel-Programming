@@ -1,0 +1,16 @@
+#x86_64
+qemu-system-x86_64 -kernel linux-5.10.112/arch/x86_64/boot/bzImage -serial stdio -append "console=ttyS0 nokaslr root=/dev/ram rdinit=/linuxrc noacpi" -initrd rootfs.img.gz -m 512
+
+#x86_64 serial redirection to telnet
+qemu-system-x86_64 -kernel linux-5.10.112/arch/x86_64/boot/bzImage -serial telnet:localhost:4321,server,nowait -append "console=ttyS0 nokaslr root=/dev/ram rdinit=/linuxrc" -initrd rootfs.img.gz -m 512
+
+x86 crash kernel
+
+kexec -p crash/bzImage --initrd=crash/rootfs.img.gz --append="console=ttyS0 nokaslr root=/dev/ram rdinit=/linuxrc"
+
+echo c > /proc/sysrq-trigger
+
+qemu-system-x86_64 -kernel linux-5.10.112/arch/x86_64/boot/bzImage -serial stdio -append "console=ttyS0 nokaslr root=/dev/ram rdinit=/linuxrc crashkernel=512M" -initrd rootfs.img.gz -m 1024
+
+#x86_64 nographics mode
+sudo qemu-system-x86_64 -nographic -kernel linux-5.10.112/arch/x86_64/boot/bzImage -net nic -net ...

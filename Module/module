@@ -1,0 +1,5 @@
+MODULE_DESCRIPTION()
+MODULE_AUTHOR()
+MODULE_LICENSE()
+MODULE_VERSION();
+MODULE_INFO(my_field_name, "What easy value");

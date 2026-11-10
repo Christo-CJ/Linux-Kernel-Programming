@@ -2,8 +2,11 @@ MODULE_DESCRIPTION()
 MODULE_AUTHOR()
 MODULE_LICENSE()
 MODULE_VERSION();
-MODULE_INFO(my_field_name, "What easy value");
+MODULE_INFO(my_field_name, "What easy value");          Information on Module
 
 
-EXPORT_SYMBOL();    Anyone can acess
+EXPORT_SYMBOL();    Anyone can access  visible
+
+module_param(name,type,permision);                      define a paramete later how the parameter can be used.
+MODULE_PARAM_DESC(name,description)                     description for parameters.
 

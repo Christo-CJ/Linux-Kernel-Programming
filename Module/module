@@ -5,4 +5,5 @@ MODULE_VERSION();
 MODULE_INFO(my_field_name, "What easy value");
 
 
-EXPORT_SYMBOL()
+EXPORT_SYMBOL();    Anyone can acess
+
